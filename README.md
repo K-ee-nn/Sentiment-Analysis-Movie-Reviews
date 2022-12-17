@@ -16,14 +16,19 @@ The insights from the sentiment analysis will be used to promote more popular mo
 ## Some of the steps I did to achieve the final results:
 
 ```
-Data Cleansing
-Randomly Combine Review Texts From Positive & Negative Reviews Data Sets
-Perform Vectorisation and TF-IDF
-Perform AI Natural Language Inference
-Label Encoding
-Create model using Neural Network
-Test for unseen data
-Apply Cosine Similarity To Find Similar Texts
+- Data Cleansing
+- Randomly Combine Review Texts From Positive & Negative Reviews Data Sets
+- Perform Vectorisation and TF-IDF
+- Perform AI Natural Language Inference
+- Label Encoding
+- Create model using Neural Network
+- Test for unseen data
+- Apply Cosine Similarity To Find Similar Texts
+```
+
+## To install dependencies:
+```
+pip install -r reqs\requirements.txt
 ```
 
 
