@@ -26,6 +26,10 @@ The insights from the sentiment analysis will be used to promote more popular mo
 - Apply Cosine Similarity To Find Similar Texts
 ```
 
+## Data Cleansing
+Because the raw texts are dirty, I had to include some stop words to be filtered out of each document. Words such as:
+
+
 ## To install dependencies:
 ```
 pip install -r reqs\requirements.txt
