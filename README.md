@@ -27,7 +27,13 @@ The insights from the sentiment analysis will be used to promote more popular mo
 ```
 
 ## Data Cleansing
-Because the raw texts are dirty, I had to include some stop words to be filtered out of each document. Words such as:
+Because the raw texts are dirty, I had to do some pre-processing to clean the text.
+
+**Some of these processes are:**
+| Tokenization | Remove Punctuation | Remove Stop Words | Lemmatization | 
+| --- | --- | --- | --- |
+| Sentence Tokenize |
+| Word Tokenize |
 
 
 ## To install dependencies:
