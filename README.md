@@ -32,3 +32,7 @@ pip install -r reqs\requirements.txt
 ```
 
 
+## Difficulties encountered and learning points:
+Friend of mine, Dr Chang, gave advices on how to build the tfidfvectorizer. He corrected my mistake specifically on how I used the fit_transform method. I had to be careful when building the vectorizer. Should only fit_transform on the X_train then use transform on X_test. The reason for not using fit_transform on X_test is because fit_transform chooses the best words you provide. So even though you may have equal amount of vocabs in both sets, using fit_transform may result in the mis-alignment in the arrays(because the vocabs are different). It would render your validation set useless because your model is validating against nonsense. He also used an analogy of describing the TF-IDF function like a mother function, it gave birth to the vectorizer,  then you can use it subsequently.
+
+
