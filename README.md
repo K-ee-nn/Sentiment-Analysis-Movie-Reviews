@@ -18,8 +18,8 @@ The insights from the sentiment analysis will be used to promote more popular mo
 ```
 - Data Cleansing
 - Randomly Combine Review Texts From Positive & Negative Reviews Data Sets
+- Train Test Split
 - Perform Vectorisation and TF-IDF
-- Perform AI Natural Language Inference
 - Label Encoding
 - Create model using Neural Network
 - Test for unseen data
@@ -66,7 +66,22 @@ Because the raw texts are dirty, I had to do some pre-processing to clean the te
 |  | } |  |  |
 |  | ~ |  |  |
 
+## Randomly Combine Review Texts From Positive & Negative Reviews Data Sets
+I had to combine both the positive and negative review texts together with a corresponding label.
 
+**Size of texts and their labels after combining:**
+| Size of texts | Size of labels |
+| --- | --- | 
+| 2000 | 2000 |
+
+## Train Test Split
+Splitted the texts into 80% for training, 20% for testing
+
+
+**After Train Test Split**
+| Train Data | Train Targets | Test Data | Test Targets |
+| --- | --- | --- | --- |
+| 1600 | 1600 | 400 | 400 |
 
 
 
