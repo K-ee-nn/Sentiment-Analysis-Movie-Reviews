@@ -32,8 +32,42 @@ Because the raw texts are dirty, I had to do some pre-processing to clean the te
 **Some of these processes are:**
 | Tokenization | Remove Punctuation | Remove Stop Words | Lemmatization | 
 | --- | --- | --- | --- |
-| Sentence Tokenize |
-| Word Tokenize |
+| Sentence Tokenize | string.punctuation | stop = nltk.corpus.stopwords.words('english') | WordNetLemmatizer |
+| Word Tokenize | ! | 's |  |
+|  | " | http |  |
+|  | # | `` |  |
+|  | $ |  |  |
+|  | % |  |  |
+|  | & |  |  |
+|  | ' |  |  |
+|  | ( |  |  |
+|  | ) |  |  |
+|  | * |  |  |
+|  | + |  |  |
+|  | , |  |  |
+|  | - |  |  |
+|  | . |  |  |
+|  | / |  |  |
+|  | : |  |  |
+|  | ; |  |  |
+|  | < |  |  |
+|  | = |  |  |
+|  | > |  |  |
+|  | ? |  |  |
+|  | @ |  |  |
+|  |[ |  |  |
+|  | \ |  |  |
+|  | ] |  |  |
+|  | ^ |  |  |
+|  | _ |  |  |
+|  | ` |  |  |
+|  | { |  |  |
+|  | | |  |  |
+|  | } |  |  |
+|  | ~ |  |  |
+
+
+
 
 
 ## To install dependencies:
