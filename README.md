@@ -4,6 +4,8 @@
 
 ![image](https://user-images.githubusercontent.com/89140773/208248644-3efdad3a-9ce7-4375-87fb-4065ca44c00e.png)
 
+[Click to view the presentation slides](Presentation/Sentiment Analysis Online Movie Reviews.pdf)
+
 ## Introduction
 In this project, I was tasked to build a Neural Network that was capable of predicting whether a movie review is of a positive sentiment or a negative one, and it is categorised as a binary classification problem(0 or 1). 0 stands for negative sentiment, 1 stands for positive sentiment. 
 
