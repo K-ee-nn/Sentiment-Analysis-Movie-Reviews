@@ -17,13 +17,13 @@ The insights from the sentiment analysis will be used to promote more popular mo
 
 ```
 - Data Cleansing
-  - Randomly Combine Review Texts From Positive & Negative Reviews Data Sets
-    - Train Test Split
-      - Perform Vectorisation and TF-IDF
-        - Label Encoding
-          - Create model using Neural Network
-            - Test for unseen data
-              - Apply Cosine Similarity To Find Similar Texts
+- Randomly Combine Review Texts From Positive & Negative Reviews Data Sets
+- Train Test Split
+- Perform Vectorisation and TF-IDF
+- Label Encoding
+- Create model using Neural Network
+- Test for unseen data
+- Apply Cosine Similarity To Find Similar Texts
 ```
 
 ## Data Cleansing
