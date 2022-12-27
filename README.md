@@ -75,8 +75,7 @@ I had to combine both the positive and negative review texts together with a cor
 | 2000 | 2000 |
 
 ## Train Test Split
-Splitted the texts into 80% for training, 20% for testing
-
+Splitted the texts into 80% for training, 20% for testing. I performed Train Test Split using [sklearn.model_selection.train_test_split](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html)
 
 **After Train Test Split**
 | Train Data | Train Targets | Test Data | Test Targets |
@@ -84,7 +83,7 @@ Splitted the texts into 80% for training, 20% for testing
 | 1600 | 1600 | 400 | 400 |
 
 ## Perform Vectorisation and TF-IDF
-Because the model doesn't receive text as inputs, I had to vectorize each word into vectors. Then on these vectors, I performed Term Frequency and Inverse Document Frequency(TF-IDF) on them, scoring the uniqueness from a range of 0 - 1. The more often the word appears in the document, the less unique it is, and the lower the TF-IDF score. This allows me to know what are the important and less important words. Friend of mine, Dr Chang, gave advices on how to build the tfidfvectorizer. He corrected my mistake specifically on how I used the fit_transform method. I had to be careful when building the vectorizer. Should only fit_transform on the X_train then use transform on X_test. The reason for not using fit_transform on X_test is because fit_transform chooses the best words you provide. So even though you may have equal amount of vocabs in both sets, using fit_transform may result in the mis-alignment in the arrays(because the vocabs are different). It would render your validation set useless because your model is validating against nonsense. He also used an analogy of describing the TF-IDF function like a mother function, it gave birth to the vectorizer,  then you can use it subsequently.
+Because the model doesn't receive text as inputs, I had to vectorize each word into vectors. Then on these vectors, I performed Term Frequency and Inverse Document Frequency(TF-IDF) on them, scoring the uniqueness from a range of 0 - 1, using [sklearn.feature_extraction.text.TfidfVectorizer](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html). The more often the word appears in the document, the less unique it is, and the lower the TF-IDF score. This allows me to know what are the important and less important words. Friend of mine, Dr Chang, gave advices on how to build the tfidfvectorizer. He corrected my mistake specifically on how I used the fit_transform method. I had to be careful when building the vectorizer. Should only fit_transform on the X_train then use transform on X_test. The reason for not using fit_transform on X_test is because fit_transform chooses the best words you provide. So even though you may have equal amount of vocabs in both sets, using fit_transform may result in the mis-alignment in the arrays(because the vocabs are different). It would render your validation set useless because your model is validating against nonsense. He also used an analogy of describing the TF-IDF function like a mother function, it gave birth to the vectorizer,  then you can use it subsequently.
 
 ## Label Encoding
 I had to do categorical label encoding, reshaping them into a different shape of array. Both for y_train and y_test. 
