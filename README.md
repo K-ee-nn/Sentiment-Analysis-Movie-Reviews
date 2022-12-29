@@ -114,6 +114,22 @@ To compile the model, I used the [Adam optimizer](https://keras.io/api/optimizer
 Here I began by passing in the training data(x_train & y_train respectively),  a batch size of 20, 100 epochs, my validation data(x_test & y_test respectively) and also my callbacks such as [EarlyStopping](https://keras.io/api/callbacks/early_stopping/), [ModelCheckpoint](https://keras.io/api/callbacks/model_checkpoint/) and [learningRateScheduler](https://keras.io/api/callbacks/learning_rate_scheduler/).
 
 
+## Test for unseen data 
+I used the model to make predictions on totally unseen texts,
+the following two texts are:
+
+**Text with negative sentiment:** Just when you think you’ve seen the worst movie ever made, along comes this pile of toxic waste.
+
+**Text with positive sentiment:** This is going to go down as one of 2022’s most entertaining motion pictures.
+
+
+
+## Apply Cosine Similarity To Find Similar Texts
+Based on the given unseen positive and negative text previously, find the top most similar sentences from the training dataset.
+In the mathematical analogy of cosine similarity, it is calculate based on the degree of angle point *A* & *B. The closer the angles are to each other, the more similar the vectors are and the higher the cosine similarity. This degree of measure is computed within a score range of 0 to 1, using sklearn.metrics.pairwise.cosinesimilarity*. In the case, we are trying to compare the similarity between the given negative and positive texts against the features in our training data and retrieve words with similar meaning. The reason I chose to compute the cosine similarity word to word was because there were semantic meanings in the text that made feature engineering difficult, it is easy for us to look at the sentence as a whole, but not likewise for the model. So to counter this issue, I break paragraphs to sentences, sentences to words, words to vectors and vectors to TF-IDF. Once the TF-IDF values were obtained, I computed the cosine similarity for each word in the unseen texts against each word(vocab/terms) in the training dataset. Then I sort the values from the largest to smallest and display the relevant word for the top cosine similarity values.
+
+
+
 
 ## To install dependencies:
 ```
